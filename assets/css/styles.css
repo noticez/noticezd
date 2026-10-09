@@ -32,8 +32,11 @@ html, body {
 }
 body {
     background-color: #FBF9F6;
-    background-image: url('../media/nnnoise.svg'); 
-    background-repeat: repeat;
+    background-image: url('../media/nnnoise.svg'), url(../media/rrreplicate.svg); 
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    background-position: center, center;
+    background-size: cover, cover;
     }
 
 main {
@@ -118,15 +121,18 @@ a * {
     cursor: pointer;
 }
 
-
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
 .hero-button {
     font-size: 36px;
     display: inline-flex; 
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    gap: 8px;
     padding: 12px 24px;
-    border: 2px solid #1A1D24;
     border-radius: 12px;
     transition: background-color 0.3s ease,
                 color 0.3s ease,
@@ -134,24 +140,62 @@ a * {
               box-shadow 0.3s ease,
               transform 0.3s ease;
 }
+.hero-button-pages .icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+.hero-button-pages .icon-filled {
+    opacity: 0;
+}
+.hero-button-pages .icon-outline {
+    opacity: 1;
+}
+.hero-button-pages svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    transition: opacity 0.2s ease;
+}
+
+.hero-button-links {
+    background: #1A1D24;
+    color: #FBF9F6;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.hero-button-pages {
+    background: #FBF9F6;
+    color: #1A1D24;
+    border: 2px solid #1A1D24;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
 .hero-button-text {
     display: inline-block;
     line-height: 1.2;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .hero-button:hover {
+    .hero-button-pages:hover {
         background: #1A1D24;
         color: #FBF9F6;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    .hero-button-pages:hover svg {
+        fill: #FBF9F6;
+    }
+    .hero-button-links:hover {
+        background-color: #7c8cce;
+        box-shadow: 0 10px 20px rgba(124, 140, 206, 0.5);
+    }
+    .hero-button-pages:hover .icon-filled {
+        opacity: 1;
     }
 }
 
-.hero-button:active {
-    background: #1A1D24;
-    color: #FBF9F6;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
 
 .footer {
     display: flex;
@@ -193,7 +237,7 @@ footer p {
 
 @media (hover: hover) and (pointer: fine) {
     .social-link:hover {
-        color: #004c9e;
+        color: #7c8cce;
     }
 }
 .social-icon {
