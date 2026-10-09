@@ -29,7 +29,7 @@ html, body {
 }
 body {
     background-color: #FBF9F6;
-    background-image: url('../media/nnnoise.png'), url(../media/rrreplicate.svg); 
+    background-image: url('../media/nnnoise.png'), url('../media/rrreplicate.svg'); 
     background-repeat: repeat, repeat;
     background-size: auto, auto;
     background-position: center, center;
@@ -72,9 +72,6 @@ main {
       transform: translate(0,0);
       opacity: 100;
    }
-}
-.hero-avatar:hover {
-    filter: invert(1);
 }
 .hero-content {
     display: flex;
@@ -254,24 +251,40 @@ footer p {
 @media (max-width: 780px) {
     .hero {
         flex-direction: column;
+        gap: 8px;
     }
     .hero-content {
         align-items: center;
+        gap: 4px;
     }
 
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 520px) {
     .hero-avatar img {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero p {
+        font-size: 32px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-button {
+        font-size: 32px;
+    }
+    .hero-button svg {
+        width: 32px;
+        height: 32px;
+    }
+    .hero-button-pages .icon-wrapper {
+        width: 32px; 
+        height: 32px;   
     }
     .footer-content {
         justify-content: center;
