@@ -261,6 +261,17 @@ footer p {
 }
 
 @media (max-width: 520px) {
+    main {
+        align-items: flex-start;
+        padding-top: 60px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+
+
+
+
     .hero-avatar img {
         width: 200px;
         height: 200px;
@@ -298,5 +309,12 @@ footer p {
     }
     .social-link:last-child {
         grid-column: 2;
+    }
+    .footer p {
+        font-size: 28px;
+    }
+    .social-icon {
+        width: 28px;
+        height: 28px;
     }
 }
