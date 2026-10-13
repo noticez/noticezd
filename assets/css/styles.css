@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
     cursor: default;
-    user-select: none;
+    /* user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -webkit-user-drag: none;
+    -webkit-user-drag: none; */
 }
 
 
@@ -36,7 +36,7 @@ body {
     background-size: auto, cover;
     }
 
-main {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,12 +94,20 @@ main {
 h1 {
     color: #1A1D24;
     margin: 0;
-    font-size: 48px;
+}
+.hero-content h1 {
+        font-size: 48px;
+}
+h2 {
+    color: #1A1D24;
+    margin: 0;
 }
 
 p {
     color: #1A1D24;
     margin: 0;
+}
+.hero-content p {
     font-size: 36px;
 }
 
@@ -317,4 +325,45 @@ footer p {
         width: 28px;
         height: 28px;
     }
+}
+.error-body {
+    background-color: #FBF9F6;
+    background-image: url('../media/nnnoise.png'); 
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    background-size: auto;
+}
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.error-content h1 {
+    font-size: 120px;
+}
+.error-content h2 {
+    font-size: 48px;
+}
+.error-content p {
+    font-size: 24px;
+}
+.error-content a {
+    font-size: 24px;
+}
+.error-button {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 4px;
+    color: #606d9e;
 }
